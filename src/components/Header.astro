@@ -1,0 +1,40 @@
+<header class="bg-slate-200 dark:bg-slate-800">
+    <nav
+        class="flex flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between"
+    >
+        <span class="text-xl font-bold">Mark Ryan</span>
+        <ul class="flex flex-col gap-2 md:flex-row md:gap-6">
+            <li>
+                <a class="transition-colors hover:text-brand" href="#about"
+                    >About</a
+                >
+            </li>
+            <li>
+                <a class="transition-colors hover:text-brand" href="#work"
+                    >Work</a
+                >
+            </li>
+            <li>
+                <a class="transition-colors hover:text-brand" href="#contact"
+                    >Contact</a
+                >
+            </li>
+        </ul>
+        <button
+            id="darkModeToggle"
+            type="button"
+            class="rounded-lg border border-slate-400 px-4 py-2"
+        >
+            Toggle Dark Mode
+        </button>
+    </nav>
+</header>
+
+<script is:inline>
+    const darkModeToggle = document.querySelector("#darkModeToggle");
+    const html = document.querySelector("html");
+
+    darkModeToggle.addEventListener("click", function () {
+        html.classList.toggle("dark");
+    });
+</script>
